@@ -10,7 +10,8 @@ export class ConfigurationService {
   public API_Base_URL = "http://dummy.restapiexample.com/api/v1";
 
   public URLS = {
-    EMPLOYEES : `${this.API_Base_URL}/employees`
+    EMPLOYEES : `${this.API_Base_URL}/employees`,
+    PRODUCTS : `https://fakestoreapi.com/products`
   }
 
 }

@@ -12,16 +12,14 @@ export class NewemployeeComponent implements OnInit {
 
   //public employeedata : Employee2[] = this.employees.getEmployees();
   
-  
   public employeedata : Employee2[] | null = null;
 
   constructor(private employees: EmployeeserviceService) { }
 
   ngOnInit(): void {
-
-    this.employees.getEmployeesbyapi().subscribe((response)=>{
+    this.employees.getEmployeesbyapi().subscribe((response : any)=>{
       console.log(response);
-      this.employeedata = response;
+      this.employeedata = response.data.splice(0,4);
     })
     
   }
