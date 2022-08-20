@@ -1,0 +1,71 @@
+<section class="py-2 py-md-3">
+    <div class="container-fluid">
+        <div class="row g-2 justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1 class="h4 mb-3">User Registration using Template driven form</h1>
+                <p *ngIf="serverError.length > 0 && userRegForm.form.status === 'INVALID'" class="mb-1 alert alert-danger p-1">{{serverError}}</p>
+            </div>
+            <div class="col-md-4">
+                <main class="form-signin m-auto">
+                    <form #userRegForm="ngForm" (ngSubmit)="userRegistration(userRegForm)" [assignmentMatchPassword]="['password', 'confirmpassword']">
+                        <!-- [assignmentMatchPassword]="['password', 'confirmpassword']" -->
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" [ngClass]="{ 'border-danger' : fullname.errors && fullname.touched }" name="fullname" #fullname="ngModel" [(ngModel)]="form.fullname" class="form-control" id="fullName" placeholder="name@example.com">
+                                    <label for="fullName">Full Name</label>
+                                </div>
+                                <p class="text-danger mb-0" *ngIf="fullname.errors && fullname.touched"><span *ngIf="fullname.errors['required']">Full Name is required and must be a valid name</span></p>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" [ngClass]="{ 'border-danger' : email.errors && email.touched }" required="" email name="email" #email="ngModel" [(ngModel)]="form.email" class="form-control" id="emailAddress" placeholder="name@example.com">
+                                    <label for="emailAddress">Email address</label>
+                                </div>
+                                <p class="text-danger mb-0" *ngIf="email.errors && email.touched"><span *ngIf="email.errors['required']">Email is required</span></p>
+                                <p class="text-danger mb-0" *ngIf="email.errors && email.touched"><span *ngIf="email.errors['email']">Enter a valid Email address, e.g. john@example.com</span></p>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="tel" [ngClass]="{ 'border-danger' : phoneno.errors && phoneno.touched }" required="" minlength="10" maxlength="12" name="phoneno" #phoneno="ngModel" [(ngModel)]="form.phoneno" class="form-control" id="phoneNumber" placeholder="name@example.com">
+                                    <label for="phoneNumber">Phone No.</label>
+                                </div>
+                                <p class="text-danger mb-0" *ngIf="phoneno.errors && phoneno.touched"><span *ngIf="phoneno.errors['required']">Phone is required</span></p>
+                                <p class="text-danger mb-0" *ngIf="phoneno.errors && phoneno.touched"><span *ngIf="phoneno.errors['minlength']">Phone number must be minimum 10 digits and maximum 12 digits in length</span></p>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="password" [ngClass]="{ 'border-danger' : password.errors && password.touched }" required="" minlength="6" name="password" #password="ngModel" [(ngModel)]="form.password" class="form-control" id="Password" placeholder="Password">
+                                    <label for="Password">Password</label>
+                                </div>
+                                <p class="text-danger mb-0" *ngIf="password.errors && password.touched"><span *ngIf="password.errors['required']">Password is required</span></p>
+                                <p class="text-danger mb-0" *ngIf="password.errors && password.touched"><span *ngIf="password.errors['minlength']">Password must be atleast 6 characters</span></p>
+                                <p class="text-danger mb-0" *ngIf="password.errors"><span *ngIf="password.errors['matching']">Password Mismatch</span></p>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="password" [ngClass]="{ 'border-danger' : confirmpassword.errors && confirmpassword.touched }" required="" minlength="6" name="confirmpassword" #confirmpassword="ngModel" [(ngModel)]="form.confirmpassword" class=" form-control " id="confirmPassword "
+                                        placeholder="name@example.com ">
+                                    <label for="confirmPassword">Confirm Password</label>
+                                </div>
+                                <p class="text-danger mb-0" *ngIf="confirmpassword.errors && confirmpassword.touched"><span *ngIf="confirmpassword.errors['required']">Confirm password is required</span></p>
+                                <p class="text-danger mb-0" *ngIf="confirmpassword.errors"><span *ngIf="confirmpassword.errors['matching']">Password Mismatch</span></p>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="terms" #terms="ngModel" [(ngModel)]="form.terms" value="remember-me "> Agree with terms and conditions
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <button [disabled]="userRegForm.form.status === 'INVALID'" class="btn btn-primary w-100" type="submit">Sign up</button>
+                                <!-- <button class="btn btn-primary w-100" type="submit">Sign up</button> -->
+                            </div>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>

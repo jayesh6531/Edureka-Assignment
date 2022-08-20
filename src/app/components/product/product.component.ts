@@ -10,9 +10,11 @@ import { ProductsService } from 'src/app/services/products.service';
 })
 export class ProductComponent implements OnInit {
 
-  public productListing : Products[] | null = null;
+  //public productListing : Products[] | null = null;
 
   //productListing : null | Observable<Products[]> = null
+
+  productListing :any = []
 
   constructor(private product : ProductsService) { }
 
@@ -25,13 +27,13 @@ export class ProductComponent implements OnInit {
 
   }
 
-  getProductDetails(productdetail : Products){
-    this.product.getProducts().subscribe((response : any)=>{
-      console.log(productdetail);
-      this.product = response.id
-      alert(productdetail)
-    })
+  // getProductDetails(productdetail : Products){
+  //   this.product.getProducts().subscribe((response : any)=>{
+  //    // console.log(productdetail);
+  //     this.product = response
+  //    // alert(productdetail)
+  //   })
     
-  }
+  // }
 
 }
