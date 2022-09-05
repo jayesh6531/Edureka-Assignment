@@ -7,25 +7,30 @@ import { ProductComponent } from './components/product/product.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
+import { UserloginComponent } from './components/userlogin/userlogin.component';
+import { AuthGuard } from './_helpers/auth.guard';
 
 const routes: Routes = [
   {
-    path : "", component : HomeComponent
+    path : "", component : HomeComponent, canActivate : [AuthGuard]
   },
   {
-    path : "product", component : ProductComponent
+    path : "product", component : ProductComponent, canActivate: [AuthGuard]
   },
   {
-    path : "product/:id", component : ProductDetailsComponent
+    path : "product/:id", component : ProductDetailsComponent, canActivate: [AuthGuard]
   },
   {
-    path : "contact", component : ContactComponent
+    path : "contact", component : ContactComponent, canActivate: [AuthGuard]
   },
   {
-    path : "template-form", component : TemplateFormComponent
+    path : "template-form", component : TemplateFormComponent, canActivate: [AuthGuard]
   },
   {
-    path : "reactive-form", component : ReactiveFormComponent
+    path : "reactive-form", component : ReactiveFormComponent, canActivate: [AuthGuard]
+  },
+  {
+    path : "user-login", component : UserloginComponent
   },
   {
     path : "**", component : NotFoundComponent

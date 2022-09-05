@@ -12,6 +12,7 @@ export const navigation = [
   { name :  "Contact", path : "contact" },
   { name :  "Template form", path : "template-form" },
   { name :  "Reactive form", path : "reactive-form" },
+  { name :  "Login", path : "user-login"},
 ]
 
 /*

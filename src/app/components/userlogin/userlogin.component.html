@@ -1,0 +1,32 @@
+<section class="py-2 py-md-3">
+    <div class="container-fluid">
+        <div class="row g-2 justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1 class="h4 mb-3">Log In</h1>
+            </div>
+            <div class="col-md-4">
+                <main class="form-signin m-auto">
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" formControlName="email" class="form-control" id="Email" placeholder="name@example.com">
+                                    <label for="Email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="password" formControlName="password" class="form-control" id="Password " placeholder="Password ">
+                                    <label for="Password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button class="btn btn-primary w-100" type="submit">Sign In</button>
+                            </div>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>

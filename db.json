@@ -169,6 +169,15 @@
       "confirmpassword": "",
       "terms": false,
       "id": 17
+    },
+    {
+      "email": "jayesh6531@gmail.com",
+      "fullname": "jayesh",
+      "phoneno": "8690837911",
+      "password": "jayesh@123",
+      "confirmpassword": "jayesh@123",
+      "terms": true,
+      "id": 18
     }
   ],
   "employeeregistration": [
@@ -181,6 +190,56 @@
       "password": "jayu123",
       "confirmPassword": "jayu123",
       "id": 1
+    },
+    {
+      "fullName": "jayesh",
+      "email": "jayesh.shamnani@konze.com",
+      "address": "motera",
+      "city": "ahmedabad",
+      "phoneNo": "8690837911",
+      "password": "jayesh@123",
+      "confirmPassword": "jayesh@123",
+      "id": 2
+    },
+    {
+      "fullName": "jayesh",
+      "email": "jayesh6531@gmail.com",
+      "address": "1234",
+      "city": "ahmedabad",
+      "phoneNo": "8690837911",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 3
+    },
+    {
+      "fullName": "jayesh",
+      "email": "jayesh6531@gmail.com",
+      "address": "1234",
+      "city": "ahmedabad",
+      "phoneNo": "8690837911",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 4
+    },
+    {
+      "fullName": "jayesh",
+      "email": "jayesh6531@gmail.com",
+      "address": "1234",
+      "city": "ahmedabad",
+      "phoneNo": "8690837911",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 5
+    },
+    {
+      "fullName": "jayesh",
+      "email": "jayesh123@gmail.com",
+      "address": "lsskdlsk",
+      "city": "lkdsldk",
+      "phoneNo": "lkdwldkwldk",
+      "password": "1234",
+      "confirmPassword": "1234",
+      "id": 6
     }
   ]
 }

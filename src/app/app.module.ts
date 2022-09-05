@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { NewemployeeComponent } from './components/newemployee/newemployee.component';
 import { ColorDirective } from './directives/color.directive';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
 import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -15,7 +15,13 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { TemplateFormComponent } from './components/template-form/template-form.component';
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
-import { MatchPasswordDirective } from './directives/match-password.directive'
+import { MatchPasswordDirective } from './directives/match-password.directive';
+import { UserloginComponent } from './components/userlogin/userlogin.component'
+import { JwtInterceptor } from './_helpers/jwt.interceptor';
+
+const interceptors = [
+  { provide : HTTP_INTERCEPTORS, useClass : JwtInterceptor, multi : true }
+];
 
 @NgModule({
   declarations: [
@@ -31,7 +37,8 @@ import { MatchPasswordDirective } from './directives/match-password.directive'
     ProductDetailsComponent,
     TemplateFormComponent,
     ReactiveFormComponent,
-    MatchPasswordDirective
+    MatchPasswordDirective,
+    UserloginComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +47,11 @@ import { MatchPasswordDirective } from './directives/match-password.directive'
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: JwtInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
