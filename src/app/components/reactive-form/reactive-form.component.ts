@@ -31,7 +31,8 @@ export class ReactiveFormComponent implements OnInit {
 
   employeeRegistration(){
     console.log(this.registerForm);
-    this.user.empregister(this.registerForm.value as EmployeeRegister).subscribe(()=>{})
+    this.user.empregister(this.registerForm.value as EmployeeRegister).subscribe(()=> {})
+    //this.user.empregister(this.registerForm.value as EmployeeRegister)
   }
 
 }

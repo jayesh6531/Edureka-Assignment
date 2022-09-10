@@ -13,8 +13,10 @@ export class ConfigurationService {
   public URLS = {
     EMPLOYEES : `${this.API_Base_URL}/employees`,
     PRODUCTS : `https://fakestoreapi.com/products`,
-    USERREGISTER : `${this.API_LOCAL_URL}/userregistration`,
-    EMPREGISTER : `${this.API_LOCAL_URL}/employeeregistration`
+    USERREGISTER : `${this.API_LOCAL_URL}/templateuser`,
+    EMPREGISTER : `${this.API_LOCAL_URL}/reactiveuser`,
+    REGISTER : `${this.API_LOCAL_URL}/register`,
+    LOGIN : `${this.API_LOCAL_URL}/login`
   }
 
 }

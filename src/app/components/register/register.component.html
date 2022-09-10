@@ -1,0 +1,69 @@
+<section class="py-2 py-md-3">
+    <div class="container-fluid">
+        <div class="row g-2 justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1 class="h4 mb-3">Employee Registration form using Reactive</h1>
+            </div>
+            <div class="col-md-4">
+                <main class="form-signin m-auto">
+                    <form [formGroup]="registerForm" (ngSubmit)="registration()">
+                        <div class="row g-3">
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" formControlName="fullName" class="form-control" id="fullName" placeholder="name@example.com">
+                                    <label for="fullName">Full Name</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="email" formControlName="email" class="form-control" id="Email" placeholder="name@example.com">
+                                    <label for="Email">Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" formControlName="address" class="form-control" id="Address" placeholder="name@example.com">
+                                    <label for="Address">Address</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" formControlName="city" class="form-control" id="City" placeholder="name@example.com">
+                                    <label for="City">City</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="tel" formControlName="phoneNo" class="form-control" id="phoneNumber" placeholder="name@example.com">
+                                    <label for="phoneNumber">Phone No.</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="password" formControlName="password" class=" form-control " id="Password " placeholder="Password ">
+                                    <label for="Password">Password</label>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <div class="form-floating">
+                                    <input type="password" formControlName="confirmPassword" class=" form-control " id="confirmPassword " placeholder="name@example.com ">
+                                    <label for="confirmPassword ">Confirm Password</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Agree with terms and conditions
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="col-12 ">
+                                <button class="btn btn-primary w-100 " type="submit ">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </main>
+            </div>
+        </div>
+    </div>
+</section>

@@ -14,17 +14,16 @@ export class JwtInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    const token = localStorage.getItem; // you probably want to store it in localStorage or something
+    const accessToken = window.sessionStorage.getItem("accessToken");
 
-    if (!token) {
-      return next.handle(request);
+    if (accessToken) {
+      const clonedRequest = request.clone({
+        setHeaders: {
+          accessToken: accessToken
+        }
+      })
+      return next.handle(clonedRequest)
     }
-
-    const req1 = request.clone({
-      headers: request.headers.set('Authorization', `Bearer ${token}`),
-    });
-
-    return next.handle(req1);
-
+    return next.handle(request);
   }
 }

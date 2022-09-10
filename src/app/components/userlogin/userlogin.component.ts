@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
-import { Router } from '@angular/router';
+import { Login, Register } from 'src/app/interfaces/userregister';
 import { UserloginService } from 'src/app/services/userlogin.service';
+import { UserregisterService } from 'src/app/services/userregister.service';
 
 
 @Component({
@@ -10,19 +10,18 @@ import { UserloginService } from 'src/app/services/userlogin.service';
   styleUrls: ['./userlogin.component.css']
 })
 export class UserloginComponent implements OnInit {
-  loginForm = new FormGroup({
-    email : new FormControl(""),
-    password : new FormControl("")
-  })
 
-  constructor(private userloginservice : UserloginService, private router: Router) { }
+  public form : Login = { email : "", password : "" }
+
+  constructor(private userService : UserregisterService) { }
 
   ngOnInit(): void {
   }
 
   login(){
-    console.log(this.loginForm);
-   //this.user.empregister(this.registerForm.value as EmployeeRegister).subscribe(()=>{})
+    console.log(this.form);
+    //this.userService.login(this.form as Register).subscribe(()=>{ })
+    this.userService.login(this.form as Register)
   }
 
 }

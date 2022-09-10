@@ -9,10 +9,11 @@ import { TemplateFormComponent } from './components/template-form/template-form.
 import { ReactiveFormComponent } from './components/reactive-form/reactive-form.component';
 import { UserloginComponent } from './components/userlogin/userlogin.component';
 import { AuthGuard } from './_helpers/auth.guard';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {
-    path : "", component : HomeComponent, canActivate : [AuthGuard]
+    path : "", component : HomeComponent,
   },
   {
     path : "product", component : ProductComponent, canActivate: [AuthGuard]
@@ -30,7 +31,10 @@ const routes: Routes = [
     path : "reactive-form", component : ReactiveFormComponent, canActivate: [AuthGuard]
   },
   {
-    path : "user-login", component : UserloginComponent
+    path : "register", component : RegisterComponent
+  },
+  {
+    path : "login", component : UserloginComponent
   },
   {
     path : "**", component : NotFoundComponent
@@ -38,7 +42,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

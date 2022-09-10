@@ -16,230 +16,40 @@
   "profile": {
     "name": "typicode"
   },
-  "userregistration": [
+  "templateuser": [
     {
       "email": "jayesh6531@gmail.com",
-      "fullname": "Jayesh",
+      "fullname": "Jayesh Shamnani",
       "phoneno": "8690837911",
-      "password": "jayesh123",
-      "confirmpassword": "jayesh123",
+      "password": "123456789",
+      "confirmpassword": "123456789",
       "terms": true,
       "id": 1
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 2
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 3
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 4
-    },
-    {
-      "email": "sasa",
-      "fullname": "dedsd",
-      "phoneno": "sasas",
-      "password": "sdsdsds",
-      "confirmpassword": "dsdsdsds",
-      "terms": false,
-      "id": 5
-    },
-    {
-      "email": "hsjdhsjdh@gmail.com",
-      "fullname": "hdjhdsjd",
-      "phoneno": "jsshdjshdjsh",
-      "password": "jhdsjdshj",
-      "confirmpassword": "jddsjdsj",
-      "terms": true,
-      "id": 6
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 7
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 8
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 9
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 10
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 11
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 12
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 13
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 14
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 15
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 16
-    },
-    {
-      "email": "",
-      "fullname": "",
-      "phoneno": "",
-      "password": "",
-      "confirmpassword": "",
-      "terms": false,
-      "id": 17
-    },
-    {
-      "email": "jayesh6531@gmail.com",
-      "fullname": "jayesh",
-      "phoneno": "8690837911",
-      "password": "jayesh@123",
-      "confirmpassword": "jayesh@123",
-      "terms": true,
-      "id": 18
     }
   ],
-  "employeeregistration": [
+  "reactiveuser": [
     {
-      "fullName": "jayesh shamnani",
-      "email": "jayeshshamnani@gmail.com",
+      "fullName": "jayesh",
+      "email": "jayesh6531@gmail.com",
       "address": "motera",
-      "city": "ahmedabad",
+      "city": "ahm",
       "phoneNo": "8690837911",
-      "password": "jayu123",
-      "confirmPassword": "jayu123",
+      "password": "123456789",
+      "confirmPassword": "123456789",
       "id": 1
-    },
+    }
+  ],
+  "register": [],
+  "users": [
     {
-      "fullName": "jayesh",
-      "email": "jayesh.shamnani@konze.com",
+      "email": "heena011@gmail.com",
+      "password": "$2a$10$mb6nkqOMJAlFQvi6Jrldyua55WXtUbIrj/oXAd9FDT7UedRNpnLSe",
+      "fullName": "heena",
       "address": "motera",
       "city": "ahmedabad",
       "phoneNo": "8690837911",
-      "password": "jayesh@123",
-      "confirmPassword": "jayesh@123",
-      "id": 2
-    },
-    {
-      "fullName": "jayesh",
-      "email": "jayesh6531@gmail.com",
-      "address": "1234",
-      "city": "ahmedabad",
-      "phoneNo": "8690837911",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "id": 3
-    },
-    {
-      "fullName": "jayesh",
-      "email": "jayesh6531@gmail.com",
-      "address": "1234",
-      "city": "ahmedabad",
-      "phoneNo": "8690837911",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "id": 4
-    },
-    {
-      "fullName": "jayesh",
-      "email": "jayesh6531@gmail.com",
-      "address": "1234",
-      "city": "ahmedabad",
-      "phoneNo": "8690837911",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "id": 5
-    },
-    {
-      "fullName": "jayesh",
-      "email": "jayesh123@gmail.com",
-      "address": "lsskdlsk",
-      "city": "lkdsldk",
-      "phoneNo": "lkdwldkwldk",
-      "password": "1234",
-      "confirmPassword": "1234",
-      "id": 6
+      "confirmPassword": "Jayu@6024",
+      "id": 1
     }
   ]
 }

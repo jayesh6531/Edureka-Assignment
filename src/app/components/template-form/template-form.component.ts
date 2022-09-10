@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Form } from '@angular/forms';
 import { catchError } from 'rxjs';
+import { Userregister } from 'src/app/interfaces/userregister';
 import { UserregisterService } from 'src/app/services/userregister.service';
 
 @Component({
@@ -29,13 +30,16 @@ export class TemplateFormComponent implements OnInit {
   userRegistration(userRegForm : Form){
     //console.log(this.form);
     console.log(userRegForm);
-    this.reguser.userregister(this.form).pipe(catchError((err)=>{
+    this.reguser.userregister(this.form as Userregister).pipe(catchError((err)=>{
       this.serverError = "Error While Register."
       return err;
     }))
     .subscribe(()=>{
 
     })
+
+    //this.reguser.empregister(this.form.value as EmployeeRegister).subscribe(()=>{})
+
   }
 
 }

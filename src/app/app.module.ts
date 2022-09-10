@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './components/employee/employee.component';
 import { NewemployeeComponent } from './components/newemployee/newemployee.component';
 import { ColorDirective } from './directives/color.directive';
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from "@angular/common/http";
+
 import { HomeComponent } from './components/home/home.component';
 import { ProductComponent } from './components/product/product.component';
 import { ContactComponent } from './components/contact/contact.component';
@@ -18,10 +20,7 @@ import { ReactiveFormComponent } from './components/reactive-form/reactive-form.
 import { MatchPasswordDirective } from './directives/match-password.directive';
 import { UserloginComponent } from './components/userlogin/userlogin.component'
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
-
-const interceptors = [
-  { provide : HTTP_INTERCEPTORS, useClass : JwtInterceptor, multi : true }
-];
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +37,8 @@ const interceptors = [
     TemplateFormComponent,
     ReactiveFormComponent,
     MatchPasswordDirective,
-    UserloginComponent
+    UserloginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
